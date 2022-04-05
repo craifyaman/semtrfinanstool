@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Reflection;
 using System.Web;
@@ -73,6 +74,18 @@ namespace SemTrFinance.Custom
         }
         public BaseController Controller => ViewContext.Controller as BaseController;
         public Personel CurrentUser => Controller.CurrentUser;
+        
+        public List<Personel> basePersonel
+        {
+            get
+            {
+                var list = db.Personel.ToList();
+                return list;
+            }
+            set { }
+        }
+
+       
         public List<Departman> baseDepartman
         {
             get
@@ -108,6 +121,7 @@ namespace SemTrFinance.Custom
             set { }
         }
 
+        
         public Dictionary<string, string> baseDurum
         {
             get
@@ -122,7 +136,6 @@ namespace SemTrFinance.Custom
             }
             set { }
         }
-
         public List<BaseMenu> baseMenu(string pre = "Menu", string nameSpace = "SemTrFinance.Controllers")
         {
             Assembly asm = Assembly.GetExecutingAssembly();
@@ -151,11 +164,15 @@ namespace SemTrFinance.Custom
 
                     })
                     .OrderBy(x => x.ParentOrder)
-                    .ThenBy(x=>x.Order)
+                    .ThenBy(x => x.Order)
                     .ToList();
             return controlleractionlist;
 
 
+        }
+        public string ScriptVersion()
+        {
+            return ConfigurationManager.AppSettings["ScriptVersion"]?.ToString();
         }
         public override void Execute()
         {

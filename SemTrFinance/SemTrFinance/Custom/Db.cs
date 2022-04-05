@@ -12,21 +12,37 @@ namespace SemTrFinance
     using System.Data.Entity.ModelConfiguration.Conventions;
     using SemTrFinance.Migrations;
     using SemTrFinance.Models;
+    using SemTrFinance.Models.Mikro;
 
     public partial class Db : DbContext
     {
-       
         public virtual DbSet<Personel> Personel { get; set; }
         public virtual DbSet<PersonelTip> PersonelTip { get; set; }
-
         public virtual DbSet<Departman> Departman { get; set; }
-
         public virtual DbSet<PersonelKisitlamaRelation> PersonelKisitlamaRelation { get; set; }
         public virtual DbSet<Kisitlama> Kisitlama { get; set; }
         public virtual DbSet<KisitlamaControllerAction> KisitlamaControllerAction { get; set; }
-        
         public virtual DbSet<ArayuzKisitlama> ArayuzKisitlama { get; set; }
         public virtual DbSet<PersonelArayuzKisitlama> PersonelArayuzKisitlama { get; set; }
+        public virtual DbSet<CariHareketTipi> CariHareketTipi { get; set; }
+        public virtual DbSet<CariBaglantiTipi> CariBaglantiTipi { get; set; }
+        public virtual DbSet<CariKurHesapSekli> CariKurHesapSekli { get; set; }
+        public virtual DbSet<Cari> Cari { get; set; }
+        public virtual DbSet<Stok> Stok{ get; set; }
+        public virtual DbSet<StokCinsi> StokCinsi { get; set; }
+        public virtual DbSet<SorumlulukMerkezi> SorumlulukMerkezi { get; set; }
+        public virtual DbSet<EvrakTipi> EvrakTipi { get; set; }
+        public virtual DbSet<HareketTipi> HareketTipi { get; set; }
+        public virtual DbSet<HareketCinsi> HareketCinsi { get; set; }
+        public virtual DbSet<NormalIade> NormalIade { get; set; }
+        public virtual DbSet<CariPozisyonu> CariPozisyonu { get; set; }
+        public virtual DbSet<DisTicaretTuru> DisTicaretTuru { get; set; }
+        public virtual DbSet<CariCins> CariCins { get; set; }
+        public virtual DbSet<EBelgeCins> EBelgeCins { get; set; }
+        public virtual DbSet<FaturaBelgeTuru> FaturaBelgeTuru { get; set; }
+        public virtual DbSet<Fatura> Fatura { get; set; }
+        public virtual DbSet<Ekstre> Ekstre { get; set; }
+
 
 
         public Db() : base("name=Model1")
