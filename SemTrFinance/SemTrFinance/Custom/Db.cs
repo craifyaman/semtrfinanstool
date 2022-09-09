@@ -42,6 +42,7 @@ namespace SemTrFinance
         public virtual DbSet<FaturaBelgeTuru> FaturaBelgeTuru { get; set; }
         public virtual DbSet<Fatura> Fatura { get; set; }
         public virtual DbSet<Ekstre> Ekstre { get; set; }
+        public virtual DbSet<Proje> Proje { get; set; }
 
 
 

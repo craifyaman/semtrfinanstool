@@ -163,6 +163,11 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\EkstreController.cs" />
     <Compile Include="Controllers\FaturaController.cs" />
+    <Compile Include="Migrations\202204051413514_6.cs" />
+    <Compile Include="Migrations\202204051413514_6.Designer.cs">
+      <DependentUpon>202204051413514_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mikro\Proje.cs" />
     <Compile Include="Controllers\StokController.cs" />
     <Compile Include="Controllers\DataTableController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -2536,6 +2541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202204041026209_5.resx">
       <DependentUpon>202204041026209_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202204051413514_6.resx">
+      <DependentUpon>202204051413514_6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

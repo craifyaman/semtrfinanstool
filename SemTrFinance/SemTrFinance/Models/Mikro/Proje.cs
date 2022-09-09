@@ -1,15 +1,14 @@
-﻿using System;
+﻿using SemTrFinance.Models.Mikro;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace SemTrFinance.Models.Mikro
 {
-    public class SorumlulukMerkezi
+    public class Proje
     {
-        public int SorumlulukMerkeziId { get; set; }
-        public string Kod { get; set; }
+        public int ProjeId { get; set; }
         public string Adi { get; set; }
+        public string Kod { get; set; }
+
         public virtual ICollection<Fatura> Fatura { get; set; }
     }
 }
